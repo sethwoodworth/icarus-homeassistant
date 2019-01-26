@@ -1,0 +1,104 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: CetiAlpha Ⅴ 
+  # Location required to calculate the time the sun rises and sets
+  latitude: 42.416884
+  longitude: -71.083512
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 13
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York 
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+http:
+        api_password: !secret http__api_password
+
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+  - platform: waze_travel_time
+    name: Time to work
+    origin: 26 Quincy st, Malden, MA
+    destination: 2 Canal Park, Cambridge, MA
+    region: 'US'
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+nest:
+        client_id: !secret nest__client_id
+        client_secret: !secret nest__client_secret
+
+mqtt:
+        broker: localhost
+        username: !secret mqtt__username
+        password: !secret mqtt__password
+
+light:
+        - platform: tplink
+          name: sethlamp
+          host: 10.1.2.1
+
+device_tracker:
+  - platform: ddwrt
+    host: 10.1.1.1
+    username: ddwrt__username
+    password: ddwrt__password
+    interval_seconds: 30
+    new_device_defaults:
+      track_new_devices: false
+
+weather:
+  - platform: openweathermap
+    api_key: openweathermap__api_key
