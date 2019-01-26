@@ -1,0 +1,63 @@
+seth_tamara:
+  hide_if_away: false
+  icon:
+  mac: 64:A2:F9:13:12:E9
+  name: seth
+  picture:
+  track: true
+
+bc_ff_eb_6d_84_40:
+  hide_if_away: false
+  icon:
+  mac: BC:FF:EB:6D:84:40
+  name: '*'
+  picture:
+  track: true
+
+bweeksmac1:
+  hide_if_away: false
+  icon:
+  mac: 98:01:A7:AB:0D:67
+  name: BWEEKSMAC1
+  picture:
+  track: true
+
+74_29_af_b1_17_b9:
+  hide_if_away: false
+  icon:
+  mac: 74:29:AF:B1:17:B9
+  name: '*'
+  picture:
+  track: false
+
+lb100:
+  hide_if_away: false
+  icon:
+  mac: 50:C7:BF:DA:EB:1E
+  name: LB100
+  picture:
+  track: false
+
+saturnine:
+  hide_if_away: false
+  icon:
+  mac: 28:C6:3F:69:F6:68
+  name: saturnine
+  picture:
+  track: true
+
+02aa01ac42140995:
+  hide_if_away: false
+  icon:
+  mac: 18:B4:30:14:9B:DB
+  name: 02AA01AC42140995
+  picture:
+  track: true
+
+laptop_f0quhcgc:
+  hide_if_away: false
+  icon:
+  mac: 98:3B:8F:6F:DB:C8
+  name: LAPTOP-F0QUHCGC
+  picture:
+  track: true

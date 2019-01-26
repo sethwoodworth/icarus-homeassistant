@@ -1,0 +1,50 @@
+title: CetiAlphaV
+views:
+  - cards:
+      - type: thermostat
+        entity: climate.dining_room
+      - type: media-control
+        entity: media_player.main_viewer
+      - title: Remote
+        entities:
+          - remote.main_viewer
+        type: entities
+      - type: weather-forecast
+        entity: weather.openweathermap
+      - graph: line
+        unit: Percent
+        type: sensor
+        entity: sensor.dining_room_thermostat_humidity
+      - graph: line
+        type: sensor
+        entity: sensor.dining_room_thermostat_temperature
+      - type: light
+        entity: light.sethlamp
+    path: default_view
+    badges:
+      - binary_sensor.dining_room_thermostat_online
+      - device_tracker.saturnine
+      - device_tracker.bweeksmac1
+      - device_tracker.laptop_f0quhcgc
+      - device_tracker.seth_tamara
+      - sensor.dining_room_thermostat_hvac_state
+      - sensor.yr_symbol
+      - sensor.dining_room_thermostat_operation_mode
+      - sensor.dining_room_thermostat_target
+      - sensor.dining_room_thermostat_humidity
+      - sensor.ceti_alpha_v_eta
+      - sensor.dining_room_thermostat_temperature
+      - sun.sun
+      - sensor.time_to_work
+    title: Home
+  - cards:
+      - tap_action:
+          action: none
+        image: >-
+          https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=01103050&parm_cd=00065&period=7
+        type: picture
+        hold_action:
+          action: none
+    title: Environment
+    badges: []
+    path: environ
